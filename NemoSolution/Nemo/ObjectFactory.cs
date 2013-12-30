@@ -787,7 +787,7 @@ namespace Nemo
         public static OperationResponse Delete<T>(ParamList parameters, string connectionName = null, bool captureException = false, string schema = null)
             where T : class, IBusinessObject
         {
-            return Delete<T>(parameters.ExtractParameters(typeof(T), OPERATION_DELETE), connectionName, captureException);
+            return Delete<T>(parameters.ExtractParameters(typeof(T), OPERATION_DELETE), connectionName, captureException, schema);
         }
 
         public static OperationResponse Delete<T>(Param[] parameters, string connectionName = null, bool captureException = false, string schema = null)
